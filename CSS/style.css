@@ -1,22 +1,112 @@
 @font-face {
-    font-family: 'PoliceMinecraft';
-    src: url('../minecraft-font.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-/* #f2f2f2 */
-body {
-    background: radial-gradient(circle, #353535 10%, #252525 100%);
-    background-size: cover;
-    font-family: PoliceMinecraft, sans-serif; /*Police minecraft*/
-    text-align : center; /* Aligne le texte au centre */ 
-    color: #FFFFFF
+  font-family: 'PoliceMinecraft';
+  src: url('../minecraft-font.ttf') format('truetype');
 }
 
-.img-menu {
-    width: 300px; 
-    height: auto;
-    border-radius: 10px; 
-    margin-top: 20px;
+body {
+  background: radial-gradient(circle, #353535 10%, #252525 100%);
+  font-family: 'PoliceMinecraft', sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  background: #2c2c2c; /*Couleur de fond*/
+  padding: 20px; 
+  border-bottom: 4px solid #5d9e47; /*ligne verte pour délimiter le bas de la banderole*/
+}
+/*Police pour le titre "Minecraft Wiki" */
+.header h1 { 
+  font-size: 3rem;
+  margin: 0;
+}
+/*Police pour le sous-titre*/
+.header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* STYLE CARTE PRINCIPALE*/
+.card-presentation {
+  border-radius: 15px;
+  padding: 30px 40px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-image: url("../IMAGE/background.png");
+  background-size: cover;
+  display: block;
+  max-width: 1460px; 
+  height: 600px;
+  margin: 40px auto 0 auto; /* centré et espacée du haut */
+  font-size: 2rem;
+}
+/*Aligne le texte du paragraphe mais pas le titre*/
+.card-presentation p{
+    text-align: justify;
+}
+
+/* GRILLE */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 500px;
+}
+
+/* STYLE COMMUN DES CARTES */
+.card {
+  border-radius: 15px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* CARTES SPÉCIFIQUES */
+
+.card-blocs {
+  background: #3b3b3b;
+}
+.card-blocs:hover {
+  box-shadow: 0 0 25px #6fbe44;
+}
+
+.card-items {
+  background: #35314f;
+}
+.card-items:hover {
+  box-shadow: 0 0 25px #745dd6;
+}
+
+.card-mobs {
+  background: #402d2d;
+}
+.card-mobs:hover {
+  box-shadow: 0 0 25px #d64b4b;
+}
+
+.card-updates {
+  background: #2e3f3a;
+}
+.card-updates:hover {
+  box-shadow: 0 0 25px #47d69e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
