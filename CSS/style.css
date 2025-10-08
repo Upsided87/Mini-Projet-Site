@@ -38,6 +38,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   background-image: url("../IMAGE/background.png");
   background-size: cover;
+  background-position: center;
   display: block;
   max-width: 1460px; 
   height: 600px;
@@ -77,31 +78,39 @@ body {
 /* CARTES SPÉCIFIQUES */
 
 .card-blocs {
-  background: #3b3b3b;
+  background-image: url(../IMAGE/grass_block.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .card-blocs:hover {
   box-shadow: 0 0 25px #6fbe44;
 }
 
 .card-items {
-  background: #35314f;
+  background-image: url(../IMAGE/item.png);
+  background-size: cover;
+  background-position: center;
 }
 .card-items:hover {
-  box-shadow: 0 0 25px #745dd6;
+  box-shadow: 0 0 25px #ffe600;
 }
 
 .card-mobs {
-  background: #402d2d;
+  background-image: url(../IMAGE/mob.png);
+  background-size: cover;
+  background-position: center;
 }
 .card-mobs:hover {
-  box-shadow: 0 0 25px #d64b4b;
+  box-shadow: 0 0 25px #f2f2f2;
 }
 
 .card-updates {
-  background: #2e3f3a;
+  background-image: url(../IMAGE/copper-update.png);
+  background-size: cover;
+  background-position: center;
 }
 .card-updates:hover {
-  box-shadow: 0 0 25px #47d69e;
+  box-shadow: 0 0 25px #ff5e00;
 }
 
 /* RESPONSIVE */
