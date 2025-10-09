@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/blocs-style.css"> 
-    <title>Minecraft Wiki</title>
+    <link rel="script" href="../JAVASCRIPT/main.js"
+    <title>Blocs - Minecraft Wiki</title>
 </head>
 <body>
     <header class="header">
-        <h1>Minecraft Wiki</h1>
-        <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        <h1>Blocs Minecraft</h1>
+        <p>Découvre les différents blocs du jeu et leurs utilisations.</p>
     </header>
-    <a href="index.html" class="card card-presentation">
-        <h2>C'est quoi ?</h2>
-        <p>Minecraft est un jeu de construction et d'aventure développé par Mojang Studios, basé sur la créativité et la survie.<br><br>
-        Dans ce site, vous trouverez les informations essentielles pour mieux comprendre les différents aspects du jeu : 
-        les blocs qui composent le monde, les items à fabriquer, les créatures à affronter ou apprivoiser, 
-        et les principales mises à jour qui ont fait évoluer le gameplay au fil des années.<br><br>
-        L’objectif de ce wiki est de proposer une présentation claire et rapide de l’univers de Minecraft, 
-        avec des explications simples, des exemples, et des images tirées du jeu. 
-        </p>
 
-    </a> 
-    <main class="grid-container">
-        <a href="blocs.html" class="card card-blocs">
-            <h2>Blocs</h2>
-            <p>Découvre les différents blocs du jeu et leurs utilisations.</p>
-        </a>
-
-        <a href="items.html" class="card card-items">
-            <h2>Items</h2>
-            <p>Liste des objets importants à fabriquer et à trouver.</p>
-        </a>
-
-        <a href="mobs.html" class="card card-mobs">
-            <h2>Mobs</h2>
-            <p>Les créatures amicales et hostiles du jeu.</p>
-        </a>
-
-        <a href="updates.html" class="card card-updates">
-            <h2>Mises à jour</h2>
-            <p>Explore les nouveautés des versions récentes.</p>
-        </a>
+    <main>
+        <div class="card card-presentation">
+            <h2>C'est quoi ?</h2>
+            <p>Un bloc dans Minecraft est une unité cubique fondamentale qui constitue l’environnement du jeu. Chaque bloc a une texture, des propriétés spécifiques (comme la résistance, la gravité, la lumière émise), et peut être manipulé par le joueur (ramassé, posé, détruit).<br><br> Les blocs représentent les matériaux et éléments naturels ou artificiels du monde Minecraft : terre, pierre, bois, minerais, eau, etc.
+            Ils sont la base de la construction, de la survie et de l’exploration dans le jeu.
+            </p>
+        </div>
+        <!-- Flip card https://www.youtube.com/watch?v=HpkRUHMfjMM -->
+        <div class="card" onclick="this.classList.toggle('flip')">
+            <div class="card-inner">
+              <div class="card-face">
+                <h2>Bloc de buche</h2>
+                <p>test face</p>
+              </div>
+              <div class="card-back">
+                <h2>Bloc de buche</h2>
+                <p>test dos</p>
+              </div>
+            </div>
+          </div>          
+        </main>
     </main>
 </body>
 </html>
