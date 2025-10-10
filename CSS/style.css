@@ -47,7 +47,7 @@ body {
 }
 /*Aligne le texte du paragraphe mais pas le titre*/
 .card-presentation p{
-    text-align: justify;
+  text-align: justify;
 }
 
 /* GRILLE */
