@@ -36,16 +36,16 @@ body {
   color: white;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  background-image: url("../IMAGE/background.png");
+  background-image: url("../IMAGE/grass_block.jpg");
   background-size: cover;
   background-position: center;
   display: block;
-  max-width: 1460px; 
-  height: 600px;
+  max-width: 76%; 
   margin: 40px auto 0 auto; /* centré et espacée du haut */
   font-size: 2rem;
-}
-/*Aligne le texte du paragraphe mais pas le titre*/
+  }
+
+  /*Aligne le texte du paragraphe mais pas le titre*/
 .card-presentation p{
   text-align: justify;
 }

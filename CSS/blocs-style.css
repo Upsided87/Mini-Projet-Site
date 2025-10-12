@@ -40,8 +40,7 @@ body {
   background-size: cover;
   background-position: center;
   display: block;
-  max-width: 1460px; 
-  height: 600px;
+  max-width: 76%; 
   margin: 40px auto 0 auto; /* centré et espacée du haut */
   font-size: 2rem;
   }
