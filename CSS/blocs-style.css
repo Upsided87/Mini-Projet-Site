@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'PoliceMinecraft';
+  src: url('../minecraft-font.ttf') format('truetype');
+}
+
+body {
+  background: radial-gradient(circle, #353535 10%, #252525 100%);
+  font-family: 'PoliceMinecraft', sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  background: #2c2c2c; /*Couleur de fond*/
+  padding: 20px; 
+  border-bottom: 4px solid #5d9e47; /*ligne verte pour délimiter le bas de la banderole*/
+}
+/*Police pour le titre "Minecraft Wiki" */
+.header h1 { 
+  font-size: 3rem;
+  margin: 0;
+}
+/*Police pour le sous-titre*/
+.header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* STYLE CARTE PRINCIPALE*/
+.card-presentation {
+  border-radius: 15px;
+  padding: 30px 40px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-image: url("../IMAGE/grass_block.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+  max-width: 76%; 
+  margin: 40px auto 0 auto; /* centré et espacée du haut */
+  font-size: 2rem;
+  }
+
+/*Aligne le texte du paragraphe mais pas le titre*/
+.card-presentation p{
+  text-align: justify;
+}
+
+.card-presentation:hover {
+  transform: scale(1.05);
+  }
+
+
+.title { 
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  font-family: 'PoliceMinecraft', sans-serif;
+  margin: 0;
+}
+
+table{
+  width: 80%;
+  border-collapse: collapse; /* supprime les espaces entre les bordures */
+  text-align: center;
+  margin: 40px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+ul {
+  list-style: none; /* supprime les puces */
+  padding: 0; /* supprime le padding par défaut */
+  margin: 0; /* supprime la marge par défaut */
+  display: flex; /* met les items en ligne */
+  gap: 10px; /* espace entre les items */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip:hover::after{ /*Après avoir passer la souris sur le texte*/
+  transform: scaleX(1); /*Fait apparaitre le trait*/
+  transform-origin: bottom left; /*Le trait apparaÎt depuis la gauche*/
+}
+
+.tooltip::after{
+  content: '';
+  position: absolute; 
+  width: 100%; /*Taille du trait*/
+  transform: scaleX(0); 
+  height: 3px; /*Hauteur du trait */
+  bottom: 0; 
+  left: 0;
+  background-color: #5d9e47; /*Couleur du trait*/
+  transform-origin: bottom right; /*Le trait disparaît depuis la droite*/
+  transition: transform 0.25s ease-out; /*Temps de la transformation*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden; /*Cache le tooltip tant que la souris n'est pas dessu*/
+  width: 200px; /*Taille du tooltip*/
+  background-color: #333; /*Couleur de fond du tooltip*/
+  color: #fff; /*Couleur du texte*/
+  text-align: left; /*Aligne le texte a gauche*/
+  padding: 8px; /*Espacement du texte sur les côtés*/
+  border-radius: 5px;
+  position: absolute; 
+  z-index: 1;
+  bottom: 125%; /* au-dessus de l'élément */
+  left: 50%; 
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; /*Rend le tooltip visible quand la souris est dessu*/
+  opacity: 1; /*Rend le tooltip opaque*/
+}
