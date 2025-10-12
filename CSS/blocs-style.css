@@ -64,8 +64,6 @@ body {
   margin: 0;
 }
 
-/*TODO: Modifier le code pour qu'il fonctionne avec le nouveau tableau et que les blocs se suivent*/
-
 table{
   width: 80%;
   border-collapse: collapse; /* supprime les espaces entre les bordures */
@@ -83,6 +81,56 @@ th {
   color: white;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f210; /* Grise une ligne sur deux pour lire le tableau plus facilement*/
+ul {
+  list-style: none; /* supprime les puces */
+  padding: 0; /* supprime le padding par défaut */
+  margin: 0; /* supprime la marge par défaut */
+  display: flex; /* met les items en ligne */
+  gap: 10px; /* espace entre les items */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip:hover::after{ /*Après avoir passer la souris sur le texte*/
+  transform: scaleX(1); /*Fait apparaitre le trait*/
+  transform-origin: bottom left; /*Le trait apparaÎt depuis la gauche*/
+}
+
+.tooltip::after{
+  content: '';
+  position: absolute; 
+  width: 100%; /*Taille du trait*/
+  transform: scaleX(0); 
+  height: 3px; /*Hauteur du trait */
+  bottom: 0; 
+  left: 0;
+  background-color: #5d9e47; /*Couleur du trait*/
+  transform-origin: bottom right; /*Le trait disparaît depuis la droite*/
+  transition: transform 0.25s ease-out; /*Temps de la transformation*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden; /*Cache le tooltip tant que la souris n'est pas dessu*/
+  width: 200px; /*Taille du tooltip*/
+  background-color: #333; /*Couleur de fond du tooltip*/
+  color: #fff; /*Couleur du texte*/
+  text-align: left; /*Aligne le texte a gauche*/
+  padding: 8px; /*Espacement du texte sur les côtés*/
+  border-radius: 5px;
+  position: absolute; 
+  z-index: 1;
+  bottom: 125%; /* au-dessus de l'élément */
+  left: 50%; 
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; /*Rend le tooltip visible quand la souris est dessu*/
+  opacity: 1; /*Rend le tooltip opaque*/
 }
