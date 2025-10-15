@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/blocs-style.css"> 
-    <link rel="script" href="../JAVASCRIPT/main.js"
+    <script src="../JAVASCRIPT/main.js" defer></script>
     <title>Blocs Minecraft</title>
 </head>
 <body>
@@ -26,9 +26,9 @@
             </thead>
             <tbody> <!--Le contenu du tableau-->
                 <tr>
-                    <th colspan="2">Structurel</th> <!--Liste de blocs structurel-->
+                    <th colspan="2"><button onclick="masquer('.structurel')">Structurel</button></th> <!--Liste de blocs structurel-->
                 </tr>
-                <tr>
+                <tr class="structurel">
                     <th>Bois</th> <!--Liste de blocs de bois-->
                     <td>
                         <ul>
@@ -66,7 +66,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr>
+                <tr class="structurel">
                     <th>Roche</th> <!--Liste de blocs de roche-->
                     <td>
                         <ul>
@@ -122,7 +122,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr>
+                <tr class="structurel">
                     <th>Surface</th> <!--Liste de blocs de la surface-->
                     <td>
                         <ul>
@@ -157,7 +157,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr>
+                <tr class="structurel">
                     <th>Nether</th> <!--Liste de blocs du Nether-->
                     <td>
                         <ul>
@@ -192,7 +192,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr>
+                <tr class="structurel">
                     <th>End</th> <!--Liste de blocs de l'end-->
                     <td>
                         <ul>
@@ -214,9 +214,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2">Naturel</th> <!--Liste de blocs naturel-->
+                    <th colspan="2"><button onclick="masquer('.naturel')">Naturel</button></th> <!--Liste de blocs naturel-->
                 </tr>
-                <tr>
+                <tr class="naturel">
                     <th>Sol</th> <!--Liste de blocs du sol-->
                     <td>
                         <ul>

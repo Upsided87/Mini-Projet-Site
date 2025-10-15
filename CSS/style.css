@@ -36,7 +36,7 @@ body {
   color: white;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  background-image: url("../IMAGE/grass_block.jpg");
+  background-image: url("../IMAGE/background.png");
   background-size: cover;
   background-position: center;
   display: block;
