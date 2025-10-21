@@ -166,3 +166,14 @@ button:active {
   visibility: visible; /*Rend le tooltip visible quand la souris est dessu*/
   opacity: 1; /*Rend le tooltip opaque*/
 }
+
+.block-img {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  vertical-align: middle;
+}
+
+.masque {
+  display: none;
+}
