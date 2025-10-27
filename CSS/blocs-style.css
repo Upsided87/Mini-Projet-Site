@@ -8,14 +8,17 @@ body {
   font-family: 'PoliceMinecraft', sans-serif;
   color: #fff;
   margin: 0;
-  text-align: center;
 }
 
 /* HEADER */
 .header {
   background: #2c2c2c; /*Couleur de fond*/
-  padding: 20px; 
+  padding: 10px; 
   border-bottom: 4px solid #5d9e47; /*ligne verte pour délimiter le bas de la banderole*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 /*Police pour le titre "Minecraft Wiki" */
 .header h1 { 
@@ -26,46 +29,103 @@ body {
 .header p {
   font-size: 1.2rem;
   color: #ccc;
+  margin: 0;
 }
 
-/* STYLE CARTE PRINCIPALE*/
-.card-presentation {
-  border-radius: 15px;
-  padding: 30px 40px;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  background-image: url("../IMAGE/grass_block.jpg");
-  background-size: cover;
-  background-position: center;
-  display: block;
-  max-width: 76%; 
-  margin: 40px auto 0 auto; /* centré et espacée du haut */
-  font-size: 2rem;
-  }
+/*NAVBAR*/
+.navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
 
-/*Aligne le texte du paragraphe mais pas le titre*/
-.card-presentation p{
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.nav-logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+.nav-links a{
+  display: inline-block;
+  color:#fff;
+  transform: translateY(0px);
+  transition: 250ms;
+}
+
+.nav-links a:hover{
+  color:#5d9e47;
+  transform: translateY(-3px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  /* Pour l'animation */
+  opacity: 0;             /* invisible par défaut */
+  pointer-events: none;   /* pas cliquable quand invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-10px);
+}
+
+.nav-links.active {
+  opacity: 1;             /* visible */
+  pointer-events: auto;   /* cliquable */
+  transform: translateY(0); /* position normale */
+}
+
+.navbar-mid {
+  position: absolute; /* Sort l'élément du flux normal pour pouvoir le placer librement dans la navbar */
+  left: 50%; /* On positionne le bord gauche de l'élément au milieu horizontal de la navbar */
+  transform: translateX(-50%); /* Décale l'élément vers la gauche de la moitié de sa propre largeur pour que son centre soit aligné sur le centre de la navbar */
+  text-align: center; /* Centre le texte à l'intérieur du bloc */
+}
+
+/* CARTE */
+.card-presentation {
+  display: block;
+  max-width: 76%;
+  margin: 40px auto 0;
+  padding: 30px 40px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+  background: url("../IMAGE/grass_block.jpg") center/cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-presentation p {
   text-align: justify;
 }
 
 .card-presentation:hover {
   transform: scale(1.05);
-  }
+}
 
-
-.title { 
+/* TITRE */
+.title {
   font-size: 1.5em;
   font-weight: 900;
   text-align: center;
-  font-family: 'PoliceMinecraft', sans-serif;
   margin: 0;
 }
 
-table{
+/* TABLEAU */
+table {
   width: 80%;
-  border-collapse: collapse; /* supprime les espaces entre les bordures */
+  border-collapse: collapse;
   text-align: center;
   margin: 40px auto;
 }
@@ -77,46 +137,40 @@ th, td {
 
 th {
   background-color: #3c3c3c;
-  color: white;
 }
 
+/* LISTE */
 ul {
-  list-style: none; /* supprime les puces */
-  padding: 0; /* supprime le padding par défaut */
-  margin: 0; /* supprime la marge par défaut */
-  display: flex; /* met les items en ligne */
-  gap: 10px; /* espace entre les items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
 }
 
-button{
-  padding-top: 5px;
-  padding-bottom: 0px;
-  padding-left: 10px;
-  padding-right: 7px;
-  border-radius: 40px;
-  cursor: pointer;
+/* BOUTONS */
+button {
+  padding: 5px 7px 0 10px;
   border: 0;
-  background-color: white;
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px; /*Ombre du boutton*/
-  letter-spacing: 1.5px; /*Espacement des lettres*/
+  border-radius: 40px;
+  background: white;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 1em;
   transition: all 0.5s ease;
   font-family: 'PoliceMinecraft', sans-serif;
 }
 
-button:hover {
-  letter-spacing: 3px; /*Espacement des lettres*/
+button:hover, button:active {
+  letter-spacing: 3px;
   background-color: #5d9e47;
-  color: #ffffff;
+  color: #fff;
   box-shadow: rgb(26, 255, 37) 0px 7px 10px 0px;
 }
 
 button:active {
-  letter-spacing: 3px; 
-  background-color: #5d9e47;
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(26, 255, 37) 0px 7px 10px 0px;
   transform: translateY(2px);
   transition: 100ms;
 }
@@ -127,44 +181,44 @@ button:active {
   cursor: pointer;
 }
 
-.tooltip:hover::after{ /*Après avoir passer la souris sur le texte*/
-  transform: scaleX(1); /*Fait apparaitre le trait*/
-  transform-origin: bottom left; /*Le trait apparaÎt depuis la gauche*/
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #5d9e47;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
-.tooltip::after{
-  content: '';
-  position: absolute; 
-  width: 100%; /*Taille du trait*/
-  transform: scaleX(0); 
-  height: 3px; /*Hauteur du trait */
-  bottom: 0; 
-  left: 0;
-  background-color: #5d9e47; /*Couleur du trait*/
-  transform-origin: bottom right; /*Le trait disparaît depuis la droite*/
-  transition: transform 0.25s ease-out; /*Temps de la transformation*/
+.tooltip:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden; /*Cache le tooltip tant que la souris n'est pas dessu*/
-  width: 200px; /*Taille du tooltip*/
-  background-color: #333; /*Couleur de fond du tooltip*/
-  color: #fff; /*Couleur du texte*/
-  text-align: left; /*Aligne le texte a gauche*/
-  padding: 8px; /*Espacement du texte sur les côtés*/
+  visibility: hidden;
+  width: 200px;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
   border-radius: 5px;
-  position: absolute; 
+  position: absolute;
   z-index: 1;
-  bottom: 125%; /* au-dessus de l'élément */
-  left: 50%; 
+  bottom: 125%;
+  left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible; /*Rend le tooltip visible quand la souris est dessu*/
-  opacity: 1; /*Rend le tooltip opaque*/
+  visibility: visible;
+  opacity: 1;
 }
 
 .block-img {
@@ -176,4 +230,14 @@ button:active {
 
 .masque {
   display: none;
+}
+
+footer {
+  padding: 20px;
+  border-top: 4px solid #5d9e47; /*ligne verte pour délimiter le haut de la banderole*/
+  text-align: center;
+}
+
+footer a{
+  color: #5d9e47;
 }

@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" />
     <script src="../JAVASCRIPT/main.js" defer></script>
     <title>Minecraft Wiki</title>
 </head>
 <body>
     <header class="header">
-        <h1>Minecraft Wiki</h1>
-        <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki">
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="blocs.html">Blocs</a>  
+                    </li>
+                    <li class="nav-item">
+                        <a href="items.html">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mobs.html">Mobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="updates.html">Updates</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>  
+        <div class="navbar-mid">
+            <h1>Minecraft Wiki</h1>
+            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        </div>
+        <div class="navbar-right"></div>
     </header>
     <a href="index.html" class="card card-presentation">
         <h2>C'est quoi ?</h2>
@@ -20,7 +45,6 @@
         L’objectif de ce wiki est de proposer une présentation claire et rapide de l’univers de Minecraft, 
         avec des explications simples, des exemples, et des images tirées du jeu. 
         </p>
-
     </a> 
     <main class="grid-container">
         <a href="blocs.html" class="card card-blocs">
@@ -43,5 +67,11 @@
             <p>Explore les nouveautés des versions récentes.</p>
         </a>
     </main>
+    <footer>
+        <p>
+            Site web inspiré de : 
+            <a href="https://fr.minecraft.wiki"> https://fr.minecraft.wiki</a>
+        </p>
+    </footer>
 </body>
 </html>
