@@ -8,6 +8,9 @@ body {
   font-family: 'PoliceMinecraft', sans-serif;
   color: #fff;
   margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -88,4 +91,61 @@ body {
   left: 50%; /* On positionne le bord gauche de l'élément au milieu horizontal de la navbar */
   transform: translateX(-50%); /* Décale l'élément vers la gauche de la moitié de sa propre largeur pour que son centre soit aligné sur le centre de la navbar */
   text-align: center; /* Centre le texte à l'intérieur du bloc */
+}
+
+main {
+  flex: 1; 
+}
+
+/* GRILLE */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 500px;
+  text-align: center;
+}
+
+.card {
+  border-radius: 12px;
+  display: flex;
+}
+
+.description{
+  text-align: left;
+}
+
+.description ul{
+  top: 50%;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
+
+.description li{
+  margin-top: 10px;
+}
+
+.hostile{
+  border: 4px solid #b22222;
+}
+
+.neutre{
+  border: 4px solid #c2a63c;
+}
+
+.passif{
+    border: 4px solid #5d9e47;
+}
+
+footer {
+  padding: 20px;
+  border-top: 4px solid #5d9e47; /*ligne verte pour délimiter le haut de la banderole*/
+  text-align: center;
+}
+
+div a {
+  color: #5d9e47;
 }
