@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../CSS/mobs-style.css">
+    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" />
+    <script src="../JAVASCRIPT/main.js" defer></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <title>Mobs Minecraft</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki">
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="blocs.html">Blocs</a>  
+                    </li>
+                    <li class="nav-item">
+                        <a href="mobs.html">Mobs</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>  
+        <div class="navbar-mid">
+            <h1>Minecraft Wiki</h1>
+            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        </div>
+        <div class="navbar-right"></div>
+    </header>
+    
+    <main class="grid-container">
+        <!-- Creeper -->
+        <div class="card hostile">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_creeper.glb"
+                data-son="../IMAGE/Sons/Creeper Minecraft Sound Effect.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Hostile</li>
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
+                    <li><strong>Comportement :</strong> Approche silencieusement le joueur et explose à proximité.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Zombie -->
+        <div class="card hostile">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_zombie.glb"
+                data-son="../IMAGE/Sons/Minecraft Zombie Sound Effect.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Hostile</li>
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
+                    <li><strong>Comportement :</strong> Attaque le joueur et les villageois la nuit ou dans l’ombre.</li>
+                    <li><strong>Butin :</strong> Chair putréfiée, parfois équipement en fer.</li>
+                    <li><strong>Variante :</strong> Zombie villageois, noyé (dans l’eau).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Squelette -->
+        <div class="card hostile">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_skeleton.glb"
+                data-son="../IMAGE/Sons/Minecraft skeleton (sound effect).mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Hostile</li>
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
+                    <li><strong>Comportement :</strong> Tire à l’arc sur le joueur à distance.</li>
+                    <li><strong>Butin :</strong> Os, flèches, parfois arc.</li>
+                    <li><strong>Variante :</strong> Wither squelette (Nether).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Loup -->
+        <div class="card neutre">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_wolf.glb"
+                data-son="../IMAGE/Sons/Minecraft Wolf Sound Effects.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Neutre</li>
+                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li>
+                    <li><strong>Comportement :</strong> Attaque si frappé. Peut être apprivoisé avec des os.</li>
+                    <li><strong>Utilité :</strong> Défend son maître contre les mobs hostiles.</li>
+                    <li><strong>Biome :</strong> Forêt, taïga.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Villageois -->
+        <div class="card neutre">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_villager.glb"
+                camera-controls
+                data-son="../IMAGE/Sons/Minecraft Villager Sound Effect.mp3"
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                orientation="180deg 180deg 0deg"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Neutre</li>
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
+                    <li><strong>Comportement :</strong> Fuit les monstres et échange avec le joueur.</li>
+                    <li><strong>Butin :</strong> Aucun (inutile de le tuer...)</li>
+                    <li><strong>Particularité :</strong> Possède différents métiers selon le poste de travail.</li>
+                    <li><strong>Utilité :</strong> Permet d’obtenir des objets rares via le troc.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vache -->
+        <div class="card passif">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_cow.glb"
+                data-son="../IMAGE/Sons/Cow Sounds Effects.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Passif</li>
+                    <li><strong>Points de vie :</strong> 10 (5 cœurs)</li>
+                    <li><strong>Comportement :</strong> Ne fuit pas, peut être reproduite avec du blé.</li>
+                    <li><strong>Butin :</strong> Cuir, viande crue (ou cuite si tuée par le feu).</li>
+                    <li><strong>Utilité :</strong> Source principale de nourriture et de cuir.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Poule -->
+        <div class="card passif">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_chicken.glb"
+                data-son="../IMAGE/Sons/All Chicken Sounds.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Passif</li>
+                    <li><strong>Points de vie :</strong> 4 (2 cœurs)</li>
+                    <li><strong>Comportement :</strong> Se déplace lentement et pond des œufs.</li>
+                    <li><strong>Butin :</strong> Plumes, viande de poulet.</li>
+                    <li><strong>Utilité :</strong> Source d’œufs et de nourriture.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mouton -->
+        <div class="card passif">
+            <model-viewer 
+                src="../IMAGE/3D/minecraft_-_sheep.glb"
+                data-son="../IMAGE/Sons/Minecraft sheep sound effect.mp3"
+                camera-controls
+                disable-pan
+                disable-zoom
+                disable-tap
+                autoplay
+                interaction-prompt="none"
+                style="width: 200px; height: 400px;">
+            </model-viewer>
+            <div class="description">
+                <ul>
+                    <li><strong>Type :</strong> Passif</li>
+                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li>
+                    <li><strong>Comportement :</strong> Se promène et mange l’herbe.</li>
+                    <li><strong>Butin :</strong> Laine, viande de mouton.</li>
+                    <li><strong>Utilité :</strong> Fournit de la laine pour les lits.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Site inspiré de <a href="https://fr.minecraft.wiki">fr.minecraft.wiki</a></p>
+        <div id="click-counter-container">
+            <p>Nombre de clics sur ce site : <span id="click-count">0</span></p>
+        </div>
+    </footer>
+</body>
+</html>

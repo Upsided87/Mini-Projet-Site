@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'PoliceMinecraft';
+  src: url('../minecraft-font.ttf') format('truetype');
+}
+
+body {
+  background: radial-gradient(circle, #353535 10%, #252525 100%);
+  font-family: 'PoliceMinecraft', sans-serif;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  background: #2c2c2c; /*Couleur de fond*/
+  padding: 10px; 
+  border-bottom: 4px solid #5d9e47; /*ligne verte pour délimiter le bas de la banderole*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/*Police pour le titre "Minecraft Wiki" */
+.header h1 { 
+  font-size: 3rem;
+  margin: 0;
+}
+/*Police pour le sous-titre*/
+.header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/*NAVBAR*/
+.navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.nav-logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+.nav-links a{
+  display: inline-block;
+  color:#fff;
+  transform: translateY(0px);
+  transition: 250ms;
+}
+
+.nav-links a:hover{
+  color:#5d9e47;
+  transform: translateY(-3px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  /* Pour l'animation */
+  opacity: 0;             /* invisible par défaut */
+  pointer-events: none;   /* pas cliquable quand invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-10px);
+}
+
+.nav-links.active {
+  opacity: 1;             /* visible */
+  pointer-events: auto;   /* cliquable */
+  transform: translateY(0); /* position normale */
+}
+
+.navbar-mid {
+  position: absolute; /* Sort l'élément du flux normal pour pouvoir le placer librement dans la navbar */
+  left: 50%; /* On positionne le bord gauche de l'élément au milieu horizontal de la navbar */
+  transform: translateX(-50%); /* Décale l'élément vers la gauche de la moitié de sa propre largeur pour que son centre soit aligné sur le centre de la navbar */
+  text-align: center; /* Centre le texte à l'intérieur du bloc */
+}
+
+
+main {
+  flex: 1;
+}
+
+/* GRILLE */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  border-radius: 12px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.description {
+  text-align: left;
+}
+
+.description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.description li {
+  margin-top: 8px;
+}
+
+.hostile { border: 4px solid #b22222; }
+.neutre  { border: 4px solid #c2a63c; }
+.passif  { border: 4px solid #5d9e47; }
+
+footer {
+  padding: 20px;
+  border-top: 4px solid #5d9e47;
+  text-align: center;
+}
+
+footer a { color: #5d9e47; }
