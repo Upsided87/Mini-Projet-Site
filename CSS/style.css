@@ -125,7 +125,7 @@ body {
   padding: 40px;
   max-width: 1500px;
   margin: 0 auto;
-  height: 500px;
+  height: 300px;
   text-align: center;
 }
 
@@ -137,6 +137,7 @@ body {
   color: white;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
 }
 
 .card:hover {
