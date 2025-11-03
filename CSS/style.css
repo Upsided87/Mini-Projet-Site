@@ -192,8 +192,14 @@ footer a{
   color: #5d9e47;
 }
 
-@media (max-width: 800px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
+#stats {
+  bottom: 100px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
