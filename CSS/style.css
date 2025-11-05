@@ -1,205 +1,231 @@
 @font-face {
-  font-family: 'PoliceMinecraft';
-  src: url('../minecraft-font.ttf') format('truetype');
+  font-family: 'PoliceMinecraft'; /* Déclare la police personnalisée */
+  src: url('../minecraft-font.ttf') format('truetype'); /* Fichier de police local */
 }
 
-body {
-  background: radial-gradient(circle, #353535 10%, #252525 100%);
-  font-family: 'PoliceMinecraft', sans-serif;
-  color: #fff;
-  margin: 0;
+/* RESET / BASE */
+body { /* Styles de base du body */
+  background: radial-gradient(circle, #353535 10%, #252525 100%); /* Fond radial sombre */
+  font-family: 'PoliceMinecraft', sans-serif; /* Police principale */
+  color: #fff; /* Couleur du texte */
+  margin: 0; /* Supprime marges par défaut */
 }
 
 /* HEADER */
-.header {
+.header { /* Bandeau supérieur */
   background: #2c2c2c; /*Couleur de fond*/
-  padding: 10px; 
+  padding: 10px; /*Espace interne*/
   border-bottom: 4px solid #5d9e47; /*ligne verte pour délimiter le bas de la banderole*/
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Utilise flexbox */
+  flex-direction: row; /* Alignement en ligne */
+  align-items: center; /* Centre verticalement */
+  justify-content: space-between; /* Espace entre éléments */
 }
-/*Police pour le titre "Minecraft Wiki" */
+/* TITRE HEADER */
 .header h1 { 
-  font-size: 3rem;
-  margin: 0;
+  font-size: 3rem; /* Taille du titre */
+  margin: 0; /* Supprime marge */
 }
-/*Police pour le sous-titre*/
+/* SOUS-TITRE */
 .header p {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin: 0;
+  font-size: 1.2rem; /* Taille du sous-titre */
+  color: #ccc; /* Couleur plus claire */
+  margin: 0; /* Supprime marge */
 }
 
-/*NAVBAR*/
-.navbar {
-  display: flex;
-  position: relative;
-  align-items: center;
+/* NAVBAR */
+.navbar { /* Conteneur navbar */
+  display: flex; /* Flex pour aligner les items */
+  position: relative; /* Position relative pour positionnement interne */
+  align-items: center; /* Centre verticalement */
 }
 
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
+.navbar-left { /* Partie gauche de la navbar */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centre vertical */
+  gap: 10px; /* Espace entre éléments */
 }
 
-.nav-logo {
-  width: 80px;
-  cursor: pointer;
+.nav-logo { /* Logo du site */
+  width: 80px; /* Largeur du logo */
+  cursor: pointer; /* Curseur pointeur sur hover */
 }
 
+/* LIENS NAV */
 .nav-links a{
-  display: inline-block;
-  color:#fff;
-  transform: translateY(0px);
-  transition: 250ms;
+  display: inline-block; /* Comportement inline-block */
+  color:#fff; /* Couleur texte */
+  transform: translateY(0px); /* Position initiale */
+  transition: 250ms; /* Transition sur hover */
 }
 
 .nav-links a:hover{
-  color:#5d9e47;
-  transform: translateY(-3px);
+  color:#5d9e47; /* Couleur verte au survol */
+  transform: translateY(-3px); /* Légère remontée */
 }
 
-.nav-links {
-  display: flex;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  /* Pour l'animation */
-  opacity: 0;             /* invisible par défaut */
-  pointer-events: none;   /* pas cliquable quand invisible */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateX(-10px);
+.nav-links { /* Liste de liens */
+  display: flex; /* Affichage en ligne */
+  gap: 10px; /* Espace entre liens */
+  margin: 0; /* Annule marge par défaut */
+  padding: 0; /* Annule padding */
+  list-style: none; /* Supprime puces */
+  text-align: center; /* Centre texte à l'intérieur */
+  opacity: 0; /* invisible par défaut */
+  pointer-events: none; /* pas cliquable quand invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition d'apparition */
+  transform: translateX(-10px); /* Décalage initial */
 }
 
-.nav-links.active {
-  opacity: 1;             /* visible */
-  pointer-events: auto;   /* cliquable */
-  transform: translateY(0); /* position normale */
+.nav-links.active { /* Classe active pour afficher les liens */
+  opacity: 1; /* Visible */
+  pointer-events: auto; /* Rend cliquable */
+  transform: translateY(0); /* Position normale */
 }
 
-.navbar-mid {
-  position: absolute; /* Sort l'élément du flux normal pour pouvoir le placer librement dans la navbar */
-  left: 50%; /* On positionne le bord gauche de l'élément au milieu horizontal de la navbar */
-  transform: translateX(-50%); /* Décale l'élément vers la gauche de la moitié de sa propre largeur pour que son centre soit aligné sur le centre de la navbar */
-  text-align: center; /* Centre le texte à l'intérieur du bloc */
+/* NAVBAR CENTRÉE */
+.navbar-mid { /* Zone centrale pour titre */
+  position: absolute; /* Sort du flux normal */
+  left: 50%; /* Position horizontale au centre */
+  transform: translateX(-50%); /* Centre exact */
+  text-align: center; /* Centre le texte */
 }
 
-
-/*TODO: Rajouter la navbar a la place du text test et la centrer
-        Choisir le style de la navbar*/
-
-/* STYLE CARTE PRINCIPALE*/
-.card-presentation {
-  border-radius: 15px;
-  padding: 30px 40px;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  background-image: url("../IMAGE/background.png");
-  background-size: cover;
-  background-position: center;
-  display: block;
-  max-width: 76%; 
-  margin: 40px auto 0 auto; /* centré et espacée du haut */
-  font-size: 2rem;
-  text-align: center;
-  }
-
-  /*Aligne le texte du paragraphe mais pas le titre*/
-.card-presentation p{
-  text-align: justify;
+/* STYLE CARTE PRINCIPALE */
+.card-presentation { /* Carte d'accueil principale */
+  border-radius: 15px; /* Angles arrondis */
+  padding: 30px 40px; /* Espace interne */
+  text-decoration: none; /* Pas de soulignement */
+  color: white; /* Texte blanc */
+  transition: transform 0.2s, box-shadow 0.2s; /* Transition hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Ombre */
+  background-image: url("../IMAGE/background.png"); /* Image de fond */
+  background-size: cover; /* Couvre la zone */
+  background-position: center; /* Centre l'image */
+  display: block; /* Block pour tout le lien */
+  max-width: 76%; /* Largeur max */
+  margin: 40px auto 0 auto; /* Centré horizontalement avec marge haute */
+  font-size: 2rem; /* Taille du texte */
+  text-align: center; /* Centre texte */
 }
 
-/* GRILLE */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 40px;
-  max-width: 1500px;
-  margin: 0 auto;
-  height: 300px;
-  text-align: center;
+/* TEXTE CARTE */
+.card-presentation p{ /* Paragraphe dans la carte */
+  text-align: justify; /* Justifie le texte */
+}
+
+/* GRILLE PRINCIPALE */
+.grid-container { /* Conteneur en grille pour les cartes */
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 30px; /* Espacement entre éléments */
+  padding: 40px; /* Padding global */
+  max-width: 1500px; /* Largeur max */
+  margin: 0 auto; /* Centre horizontal */
+  height: 300px; /* Hauteur fixe (peut être ajustée) */
+  text-align: center; /* Centre le texte */
 }
 
 /* STYLE COMMUN DES CARTES */
-.card {
-  border-radius: 15px;
-  padding: 20px;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-
+.card { /* Styles partagés pour toutes les cartes */
+  border-radius: 15px; /* Angles arrondis */
+  padding: 20px; /* Espace interne */
+  text-decoration: none; /* Pas de soulignement */
+  color: white; /* Texte blanc */
+  transition: transform 0.2s, box-shadow 0.2s; /* Transition hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Ombre */
 }
 
-.card:hover {
-  transform: scale(1.05);
+.card:hover { /* Effet au survol */
+  transform: scale(1.05); /* Légère mise à l'échelle */
 }
 
 /* CARTES SPÉCIFIQUES */
-
-.card-blocs {
-  background-image: url(../IMAGE/grass_block.jpg);
-  background-size: cover;
-  background-position: center;
+.card-blocs { /* Carte Blocs */
+  background-image: url(../IMAGE/grass_block.jpg); /* Image de fond bloc */
+  background-size: cover; /* Couvre la carte */
+  background-position: center; /* Centre l'image */
 }
-.card-blocs:hover {
-  box-shadow: 0 0 25px #6fbe44;
-}
-
-.card-items {
-  background-image: url(../IMAGE/item.png);
-  background-size: cover;
-  background-position: center;
-}
-.card-items:hover {
-  box-shadow: 0 0 25px #ffe600;
+.card-blocs:hover { /* Hover blocs */
+  box-shadow: 0 0 25px #6fbe44; /* Lueur verte */
 }
 
-.card-mobs {
-  background-image: url(../IMAGE/mob.png);
-  background-size: cover;
-  background-position: center;
+.card-items { /* Carte Items (si utilisée) */
+  background-image: url(../IMAGE/item.png); /* Image item */
+  background-size: cover; /* Couvre */
+  background-position: center; /* Centre */
 }
-.card-mobs:hover {
-  box-shadow: 0 0 25px #f2f2f2;
-}
-
-.card-updates {
-  background-image: url(../IMAGE/copper-update.png);
-  background-size: cover;
-  background-position: center;
-}
-.card-updates:hover {
-  box-shadow: 0 0 25px #ff5e00;
+.card-items:hover { /* Hover items */
+  box-shadow: 0 0 25px #ffe600; /* Lueur jaune */
 }
 
-footer {
-  padding: 20px;
-  border-top: 4px solid #5d9e47; /*ligne verte pour délimiter le haut de la banderole*/
-  text-align: center;
+.card-mobs { /* Carte Mobs */
+  background-image: url(../IMAGE/mob.png); /* Image mobs */
+  background-size: cover; /* Couvre */
+  background-position: center; /* Centre */
+}
+.card-mobs:hover { /* Hover mobs */
+  box-shadow: 0 0 25px #f2f2f2; /* Lueur claire */
 }
 
-footer a{
-  color: #5d9e47;
+/* CARTES UPDATES */
+.card-updates { /* Carte mises à jour */
+  background-image: url(../IMAGE/copper-update.png); /* Image update */
+  background-size: cover; /* Couvre */
+  background-position: center; /* Centre */
+}
+.card-updates:hover { /* Hover updates */
+  box-shadow: 0 0 25px #ff5e00; /* Lueur orange */
 }
 
-#stats {
-  bottom: 100px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* FOOTER */
+footer { /* Styles du pied de page */
+  padding: 20px; /* Espace interne */
+  border-top: 4px solid #5d9e47; /* Ligne verte pour délimiter */
+  text-align: center; /* Centre contenu */
+}
+footer a{ /* Liens dans le footer */
+  color: #5d9e47; /* Couleur verte */
+}
+
+/* STATS FLOAT */
+#stats { /* Boîte des statistiques */
+  bottom: 100px; /* Position verticale (si positionné) */
+  left: 30px; /* Position horizontale */
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  color: white; /* Texte blanc */
+  padding: 10px 15px; /* Padding interne */
+  border-radius: 10px; /* Angles arrondis */
+  font-size: 14px; /* Taille du texte */
+  line-height: 1.4; /* Interlignage */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Ombre */
+}
+
+/* STATS LIST */
+#stats-list { /* Liste des stats (ol affichée sans numéros) */
+  list-style: none; /* Supprime les numéros */
+  padding: 0; /* Supprime padding */
+  margin: 0; /* Supprime marge */
+  margin-top: 10px; /* Petit espace au-dessus */
+}
+#stats-list li { /* Items de la liste stats */
+  margin-bottom: 5px; /* Espace entre lignes */
+}
+
+/* BOUTON RETOUR HAUT */
+#top-page { /* Bouton ancre en bas à droite */
+  position: fixed; /* Fixe à l'écran */
+  bottom: 20px; /* Espace bas */
+  right: 20px; /* Espace droite */
+  width: 40px; /* Largeur */
+  height: 40px; /* Hauteur */
+  border: 4px solid #5d9e47; /* Bordure verte */
+  border-radius: 50%; /* Cercle */
+  display: flex; /* Flex pour centrer contenu */
+  justify-content: center; /* Centre horizontal */
+  align-items: center; /* Centre vertical */
+}
+.arrow-up { /* Image de la flèche */
+  width: 60%; /* Taille relative */
+  height: auto; /* Proportionnel */
 }

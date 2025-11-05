@@ -1,66 +1,91 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" />
-    <script src="../JAVASCRIPT/main.js" defer></script>
-    <title>Minecraft Wiki</title>
+<!DOCTYPE html> <!-- Déclare le type de document HTML -->
+<html lang="fr"> <!-- Langue du site : français -->
+<head> <!-- En-tête du document, contient les metas, liens et scripts -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères (évite les bugs d'accents) -->
+    <link rel="stylesheet" href="../CSS/style.css"> <!-- Lien vers la feuille de style principale -->
+    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" /> <!-- Icône affichée dans l'onglet -->
+    <script src="../JAVASCRIPT/main.js" defer></script> <!-- Script JS chargé en différé pour performance -->
+    <title>Minecraft Wiki</title> <!-- Titre affiché dans l'onglet -->
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <a href="index.html">
-                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki">
+<body> <!-- Début du corps de la page -->
+
+    <!-- HEADER -->
+    <header class="header"> <!-- En-tête du site (logo, nav, titre) -->
+
+        <!-- NAVBAR -->
+        <nav class="navbar"> <!-- Barre de navigation principale -->
+            <div class="navbar-left"> <!-- Conteneur gauche : logo + liens -->
+                
+                <a href="index.html"> <!-- Lien vers la page d'accueil -->
+                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki"> <!-- Logo cliquable -->
                 </a>
-                <ul class="nav-links">
-                    <li class="nav-item">
-                        <a href="blocs.html">Blocs</a>  
+
+                <ul class="nav-links"> <!-- Liste des liens de navigation -->
+                    <li class="nav-item"> <!-- Item nav -->
+                        <a href="blocs.html">Blocs</a> <!-- Lien vers la page Blocs -->
                     </li>
-                    <li class="nav-item">
-                        <a href="mobs.html">Mobs</a>
+                    <li class="nav-item"> <!-- Item nav -->
+                        <a href="mobs.html">Mobs</a> <!-- Lien vers la page Mobs -->
                     </li>
                 </ul>
             </div>
-        </nav>  
-        <div class="navbar-mid">
-            <h1>Minecraft Wiki</h1>
-            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        </nav>  <!-- Fin navbar -->
+
+        <div class="navbar-mid"> <!-- Zone centrale du header (titre + sous-titre) -->
+            <h1>Minecraft Wiki</h1> <!-- Titre principal du site -->
+            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p> <!-- Sous-titre / accroche -->
         </div>
-        <div class="navbar-right"></div>
-    </header>
-    <a href="index.html" class="card card-presentation">
-        <h2>C'est quoi ?</h2>
-        <p>Minecraft est un jeu de construction et d'aventure développé par Mojang Studios, basé sur la créativité et la survie.<br><br>
-        Dans ce site, vous trouverez les informations essentielles pour mieux comprendre les différents aspects du jeu : 
-        les blocs qui composent le monde, les items à fabriquer, les créatures à affronter ou apprivoiser, 
-        et les principales mises à jour qui ont fait évoluer le gameplay au fil des années.<br><br>
-        L’objectif de ce wiki est de proposer une présentation claire et rapide de l’univers de Minecraft, 
-        avec des explications simples, des exemples, et des images tirées du jeu. 
-        </p>
-    </a> 
-    <main class="grid-container">
-        <a href="blocs.html" class="card card-blocs">
-            <h2>Blocs</h2>
-            <p>Découvre les différents blocs du jeu et leurs utilisations.</p>
+
+        <div class="navbar-right"></div> <!-- Zone droite vide pour mise en page -->
+    </header> <!-- Fin header -->
+
+    <!-- CARTE DE PRÉSENTATION -->
+    <a href="index.html" class="card card-presentation"> <!-- Carte principale cliquable -->
+        <h2>C'est quoi ?</h2> <!-- Titre section -->
+        <p> <!-- Paragraphe d'intro -->
+            Minecraft est un jeu de construction et d'aventure développé par Mojang Studios, basé sur la créativité et la survie.<br><br>
+            Dans ce site, vous trouverez les informations essentielles pour mieux comprendre les différents aspects du jeu : 
+            les blocs qui composent le monde, les items à fabriquer, les créatures à affronter ou apprivoiser, 
+            et les principales mises à jour qui ont fait évoluer le gameplay au fil des années.<br><br>
+            L’objectif de ce wiki est de proposer une présentation claire et rapide de l’univers de Minecraft, 
+            avec des explications simples, des exemples, et des images tirées du jeu. 
+        </p> <!-- Fin paragraphe -->
+    </a> <!-- Fin carte présentation -->
+
+    <!-- ACCÈS AUX CATÉGORIES -->
+    <main class="grid-container"> <!-- Conteneur principal en grille -->
+
+        <a href="blocs.html" class="card card-blocs"> <!-- Carte vers la page Blocs -->
+            <h2>Blocs</h2> <!-- Titre carte -->
+            <p>Découvre les différents blocs du jeu et leurs utilisations.</p> <!-- Description courte -->
         </a>
 
-        <a href="mobs.html" class="card card-mobs">
-            <h2>Mobs</h2>
-            <p>Les créatures amicales et hostiles du jeu.</p>
+        <a href="mobs.html" class="card card-mobs"> <!-- Carte vers la page Mobs -->
+            <h2>Mobs</h2> <!-- Titre carte -->
+            <p>Les créatures amicales et hostiles du jeu.</p> <!-- Description courte -->
         </a>
-    </main>
-    <footer>
-        <p>
+
+    </main> <!-- Fin main -->
+
+    <!-- FOOTER -->
+    <footer> <!-- Pied de page -->
+        <p> <!-- Texte du footer -->
             Site web inspiré de : 
-            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a>
+            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a> <!-- Lien vers la source d'inspiration -->
         </p>
-        <div id="stats">
-            <p>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</p>
-            <p>👀 Nombre de visites : <span id="visitCount">0</span></p>
-            <p>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></p>
-        </div>
-    </footer>
+
+        <!-- STATISTIQUES D’UTILISATION -->
+        <div id="stats"> <!-- Boîte des compteurs (temps, visites, clics) -->
+            <ol id="stats-list"> <!-- Liste ordonnée (affichée sans numéros via CSS) -->
+                <li>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</li> <!-- Compteur temps -->
+                <li>👀 Nombre de visites : <span id="visitCount">0</span></li> <!-- Compteur visites -->
+                <li>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></li> <!-- Compteur clics -->
+            </ol>
+        </div> <!-- Fin stats -->
+    </footer> <!-- Fin footer -->
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <a href="#" id="top-page"><img src="../IMAGE/arrow_upward_24dp_5D9E47_FILL0_wght400_GRAD0_opsz24.png" alt="Fleche vers le haut" class="arrow-up"></a> <!-- Bouton ancre pour remonter en haut -->
+
 </body>
-</html>
+</html> <!-- Fin document -->
