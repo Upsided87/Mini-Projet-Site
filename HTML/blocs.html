@@ -1,172 +1,177 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/blocs-style.css">
-    <script src="../JAVASCRIPT/main.js" defer></script>
-    <title>Blocs Minecraft</title>
+<!DOCTYPE html> <!-- Déclare le type de document HTML -->
+<html lang="fr"> <!-- Langue du document -->
+<head> <!-- En-tête du document -->
+    <meta charset="UTF-8"> <!-- Encodage -->
+    <link rel="stylesheet" href="../CSS/blocs-style.css"> <!-- Feuille de style spécifique Blocs -->
+    <script src="../JAVASCRIPT/main.js" defer></script> <!-- Script principal chargé en différé -->
+    <title>Blocs Minecraft</title> <!-- Titre onglet -->
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <a href="index.html">
-                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki">
+<body> <!-- Début du corps -->
+
+    <!-- HEADER -->
+    <header class="header"> <!-- Entête réutilisé -->
+        <nav class="navbar"> <!-- Navbar -->
+            <div class="navbar-left"> <!-- Conteneur gauche navbar -->
+                <a href="index.html"> <!-- Lien accueil -->
+                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki"> <!-- Logo -->
                 </a>
-                <ul class="nav-links">
-                    <li class="nav-item">
-                        <a href="blocs.html">Blocs</a>  
+                <ul class="nav-links"> <!-- Liens de navigation -->
+                    <li class="nav-item"> <!-- Item nav -->
+                        <a href="blocs.html">Blocs</a> <!-- Lien Blocs -->
                     </li>
                     <li class="nav-item">
-                        <a href="mobs.html">Mobs</a>
+                        <a href="mobs.html">Mobs</a> <!-- Lien Mobs -->
                     </li>
                 </ul>
             </div>
         </nav>  
-        <div class="navbar-mid">
-            <h1>Minecraft Wiki</h1>
-            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        <div class="navbar-mid"> <!-- Zone centrale titre -->
+            <h1>Minecraft Wiki</h1> <!-- Titre -->
+            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p> <!-- Sous-titre -->
         </div>
-        <div class="navbar-right"></div>
-    </header>
-    <div class="card card-presentation">
-        <h2>C'est quoi ?</h2>
+        <div class="navbar-right"></div> <!-- Zone droite vide -->
+    </header> <!-- Fin header -->
+
+    <!-- PRESENTATION -->
+    <div class="card card-presentation"> <!-- Carte descriptive -->
+        <h2>C'est quoi ?</h2> <!-- Titre -->
         <p>Un bloc dans Minecraft est une unité cubique fondamentale qui constitue l’environnement du jeu. Chaque bloc a une texture, des propriétés spécifiques (comme la résistance, la gravité, la lumière émise), et peut être manipulé par le joueur (ramassé, posé, détruit).<br><br> Les blocs représentent les matériaux et éléments naturels ou artificiels du monde Minecraft : terre, pierre, bois, minerais, eau, etc.
         Ils sont la base de la construction, de la survie et de l’exploration dans le jeu.
-        </p>
-    </div>
-    <main>
+        </p> <!-- Fin paragraphe -->
+    </div> <!-- Fin carte présentation -->
+
+    <main> <!-- Contenu principal -->
         <table> <!--Crée le tableau-->
             <thead> <!--Titres des colonnes-->
                 <tr> <!--Crée ligne du tableau-->
-                    <th colspan="2">Blocs</th>
+                    <th colspan="2">Blocs</th> <!--En-tête du tableau -->
                 </tr>
             </thead>
             <tbody> <!--Le contenu du tableau-->
                 <tr>
-                    <th colspan="2"><button onclick="masquer('.structurel')">Structurel</button></th> <!--Liste de blocs structurel-->
+                    <th colspan="2"><button onclick="masquer('.structurel')">Structurel</button></th> <!--Bouton cache/affiche catégorie -->
                 </tr>
                     <tr class="structurel">    
-                        <th>Bois</th> <!--Liste de blocs de bois-->
+                        <th>Bois</th> <!--Titre colonne -->
                         <td>
-                            <ul>
-                                <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-log.png" alt="Bois" class="block-img">
-                                    Bois
-                                    <span class="tooltiptext">
+                            <ul> <!-- Liste de blocs bois -->
+                                <li class="tooltip"> <!-- Item liste avec tooltip -->
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-log.png" alt="Bois" class="block-img"> <!-- Image bloc -->
+                                    Bois <!-- Nom du bloc -->
+                                    <span class="tooltiptext"> <!-- Définition tooltip -->
                                         Le bois est un bloc possédant la texture des bûches sur leurs 6 faces. <br><br>
                                         Ils se déclinent en autant d'essences que leur homologue.
                                     </span>
                                 </li>
-                                <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-log-top.png" alt="Bûches" class="block-img">
-                                    Bûches
-                                    <span class="tooltiptext">
+                                <li class="tooltip"> <!-- Item -->
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-log-top.png" alt="Bûches" class="block-img"> <!-- Image -->
+                                    Bûches <!-- Nom -->
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Les bûches peuvent êtres trouvées sur les arbres à l'état naturel. <br><br>
                                         Elles sont principalement utilisées comme blocs de construction et pour créer des planches.
                                     </span>
                                 </li>
-                                <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-planks.png" alt="Planche" class="block-img">
-                                    Planche
-                                    <span class="tooltiptext">
+                                <li class="tooltip"> <!-- Item -->
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_oak-planks.png" alt="Planche" class="block-img"> <!-- Image -->
+                                    Planche <!-- Nom -->
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Les planches sont des blocs fabriqués à partir de bûches. <br><br>
                                         Elles ont l'apparence de séries de planches jointes entre elles.
                                     </span>
                                 </li>
-                                <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_block-of-bamboo.png" alt="Bloc de bambou" class="block-img">
-                                    Bloc de bambou
-                                    <span class="tooltiptext">
+                                <li class="tooltip"> <!-- Item -->
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_block-of-bamboo.png" alt="Bloc de bambou" class="block-img"> <!-- Image -->
+                                    Bloc de bambou <!-- Nom -->
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Le bloc de bambou est un bloc semblable à une bûche en bambou permettant de fabriquer des planches de bambou.
                                     </span>
                                 </li>
                             </ul>
                         </td>
                     </tr>
-                    <tr class="structurel">
-                        <th>Roche</th> <!--Liste de blocs de roche-->
+                    <tr class="structurel"> <!-- Ligne catégorie roche -->
+                        <th>Roche</th> <!-- Titre sous-catégorie -->
                         <td>
-                            <ul>
+                            <ul> <!-- Liste roche -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_stone.png" alt="Roche" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_stone.png" alt="Roche" class="block-img"> <!-- Image -->
                                     Roche
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         La roche est un bloc qui apparaît sous la surface du monde normal et à la surface des montagnes.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_cobblestone.png" alt="Pierre" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_cobblestone.png" alt="Pierre" class="block-img"> <!-- Image -->
                                     Pierre
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         La pierre de construction de base, obtenue en minant de la roche. Utilisée pour les constructions et fours.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_granite.png" alt="Granite" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_granite.png" alt="Granite" class="block-img"> <!-- Image -->
                                     Granite
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Bloc de roche ornementale, principalement utilisé pour décorer ou construire.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_diorite.png" alt="Diorite" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_diorite.png" alt="Diorite" class="block-img"> <!-- Image -->
                                     Diorite
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Bloc de roche claire, utile pour la décoration ou la construction.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_stone-bricks.png" alt="Stone Bricks" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_stone-bricks.png" alt="Stone Bricks" class="block-img"> <!-- Image -->
                                     Stone Bricks
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Blocs de pierre taillée, résistants et esthétiques pour les bâtiments.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_deepslate.png" alt="Deepslate" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_deepslate.png" alt="Deepslate" class="block-img"> <!-- Image -->
                                     Deepslate
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Bloc sombre trouvé en profondeur, utilisé pour les constructions et crafts avancés.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_deepslate-bricks.png" alt="Deepslate Bricks" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_deepslate-bricks.png" alt="Deepslate Bricks" class="block-img"> <!-- Image -->
                                     Deepslate Bricks
-                                    <span class="tooltiptext">
+                                    <span class="tooltiptext"> <!-- Tooltip -->
                                         Blocs de deepslate taillés, principalement décoratifs et résistants.
                                     </span>
                                 </li>
                             </ul>
                         </td>
                     </tr>
-                    <tr class="structurel">
-                        <th>Surface</th> <!--Liste de blocs de la surface-->
+                    <tr class="structurel"> <!-- Ligne catégorie surface -->
+                        <th>Surface</th> <!-- Titre -->
                         <td>
-                            <ul>
+                            <ul> <!-- Liste surface -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_bricks.png" alt="Briques" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_bricks.png" alt="Briques" class="block-img"> <!-- Image -->
                                     Briques
                                     <span class="tooltiptext">
                                         Bloc de construction fabriqué avec des briques cuites, utilisé pour décorer ou construire.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_sandstone.png" alt="Grès" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_sandstone.png" alt="Grès" class="block-img"> <!-- Image -->
                                     Grès
                                     <span class="tooltiptext">
                                         Bloc trouvé dans les déserts, utilisé pour la construction ou l’architecture décorative.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_red-sandstone.png" alt="Grès rouge" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_red-sandstone.png" alt="Grès rouge" class="block-img"> <!-- Image -->
                                     Grès rouge
                                     <span class="tooltiptext">
                                         Bloc rouge trouvé dans les déserts rouges, utilisé en construction.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_prismarine.png" alt="Prismarine" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_prismarine.png" alt="Prismarine" class="block-img"> <!-- Image -->
                                     Prismarine
                                     <span class="tooltiptext">
                                         Bloc bleu trouvé dans les monuments océaniques, utilisé pour la construction.
@@ -175,33 +180,33 @@
                             </ul>
                         </td>
                     </tr>
-                    <tr class="structurel">
-                        <th>Nether</th> <!--Liste de blocs du Nether-->
+                    <tr class="structurel"> <!-- Ligne catégorie nether -->
+                        <th>Nether</th> <!-- Titre -->
                         <td>
-                            <ul>
+                            <ul> <!-- Liste nether -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_netherrack.png" alt="Netherrack" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_netherrack.png" alt="Netherrack" class="block-img"> <!-- Image -->
                                     Netherrack
                                     <span class="tooltiptext">
                                         La netherrack (ou roche du Nether) est un bloc rocheux trouvable dans le Nether et sur les portails en ruine.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_nether-bricks.png" alt="Brique du nether" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_nether-bricks.png" alt="Brique du nether" class="block-img"> <!-- Image -->
                                     Briques du nether
                                     <span class="tooltiptext">
                                         Les briques du Nether constituent la majeure partie des forteresses du Nether.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_blackstone.png" alt="Roche noir" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_blackstone.png" alt="Roche noir" class="block-img"> <!-- Image -->
                                     Roche noir
                                     <span class="tooltiptext">
                                         La roche noire est un bloc sombre qui se trouve à l'état naturel dans le Nether.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_basalt.png" alt="Basalte" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_basalt.png" alt="Basalte" class="block-img"> <!-- Image -->
                                     Basalte
                                     <span class="tooltiptext">
                                         Le basalte est un bloc qui se trouve dans le Nether sous forme de pillier.
@@ -210,19 +215,19 @@
                             </ul>
                         </td>
                     </tr>
-                    <tr class="structurel">
-                        <th>End</th> <!--Liste de blocs de l'end-->
+                    <tr class="structurel"> <!-- Ligne catégorie end -->
+                        <th>End</th> <!-- Titre -->
                         <td>
-                            <ul>
+                            <ul> <!-- Liste end -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_end-stone.png" alt="Pierre de l'End" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_end-stone.png" alt="Pierre de l'End" class="block-img"> <!-- Image -->
                                     Pierre de l'End
                                     <span class="tooltiptext">
                                         La pierre de l'End est un bloc qui ne se trouve à l'état naturel que dans l'End, dont elle constitue toute l'île.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_nether-bricks.png" alt="Bloc de purpur" class="block-img">
+                                    <img src="../IMAGE/Textures/Structurel/BlockSprite_nether-bricks.png" alt="Bloc de purpur" class="block-img"> <!-- Image -->
                                     Bloc de purpur
                                     <span class="tooltiptext">
                                         Le Bloc de purpur est un bloc décoratif qui est naturellement généré dans les cités et navires de l'End.
@@ -231,23 +236,23 @@
                             </ul>
                         </td>
                     </tr>
-                <tr>
-                    <th colspan="2"><button onclick="masquer('.naturel')">Naturel</button></th> <!--Liste de blocs naturel-->
+                <tr> <!-- Bouton catégorie suivant -->
+                    <th colspan="2"><button onclick="masquer('.naturel')">Naturel</button></th> <!-- Bouton masque catégorie Naturel -->
                 </tr>
-                <tr class="naturel">
-                    <th>Sol</th> <!--Liste de blocs du sol-->
+                <tr class="naturel"> <!-- Ligne nature - sol -->
+                    <th>Sol</th> <!-- Sous-catégorie sol -->
                     <td>
-                        <div class="contenu">  
-                            <ul>
+                        <div class="contenu">  <!-- Conteneur -->
+                            <ul> <!-- Liste sol -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_clay.png" alt="Argile" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_clay.png" alt="Argile" class="block-img"> <!-- Image -->
                                     Argile
                                     <span class="tooltiptext">
                                         L'argile est un bloc que l'on trouve en abondance dans les cavernes luxuriantes ou en parcelles dans les eaux de surface.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_dirt.png" alt="Terre" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_dirt.png" alt="Terre" class="block-img"> <!-- Image -->
                                     Terre
                                     <span class="tooltiptext">
                                         La terre est un bloc que l'on trouve en abondance dans le monde normal. <br><br>
@@ -255,22 +260,22 @@
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_clay.png" alt="Gravier" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_clay.png" alt="Gravier" class="block-img"> <!-- Image (remplacé par clay, vérifier si voulu) -->
                                     Gravier
                                     <span class="tooltiptext">
                                         Le gravier est un bloc affecté par la gravité généré naturellement à la surface et dans le Nether.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_mud.png" alt="Boue" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_mud.png" alt="Boue" class="block-img"> <!-- Image -->
                                     Boue
                                     <span class="tooltiptext">
                                         La boue est un bloc se générant naturellement dans les marais à mangroves.
                                     </span>
                                 </li>
-                                <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_crimson-nylium.png" alt="Nylium" class="block-img">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_warped-nylium.png" alt="Nylium" class="block-img">
+                                <li class="tooltip"> <!-- Item avec deux images côte à côte -->
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_crimson-nylium.png" alt="Nylium" class="block-img"> <!-- Image variant 1 -->
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_warped-nylium.png" alt="Nylium" class="block-img"> <!-- Image variant 2 -->
                                     Nylium
                                     <span class="tooltiptext">
                                         Le nylium est un bloc qui se génère dans le Nether. <br><br>
@@ -278,7 +283,7 @@
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sand.png" alt="Sable" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sand.png" alt="Sable" class="block-img"> <!-- Image -->
                                     Sable
                                     <span class="tooltiptext">
                                         Le sable est un bloc affecté par la gravité qui se trouve en abondance dans les déserts et les plages, et plus rarement dans ou près de la surface de l'eau.
@@ -290,34 +295,34 @@
                             </ul>
                         </div>
                     </td>
-                    <tr class="naturel">
-                    <th>Plantes</th> <!--Liste de blocs de plantes-->
+                    <tr class="naturel"> <!-- Ligne plantes -->
+                    <th>Plantes</th> <!-- Titre sous-catégorie -->
                     <td>
-                        <div class="contenu">  
-                            <ul>
+                        <div class="contenu">  <!-- Conteneur -->
+                            <ul> <!-- Liste plantes -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_carved-pumpkin.png" alt="Citrouille" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_carved-pumpkin.png" alt="Citrouille" class="block-img"> <!-- Image -->
                                     Citrouille
                                     <span class="tooltiptext">
                                         Une citrouille  est un bloc de fruit apparaissant sur l'herbe dans la plupart des biomes de La Surface
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_melon.png" alt="Melon" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_melon.png" alt="Melon" class="block-img"> <!-- Image -->
                                     Pastèque
                                     <span class="tooltiptext">
                                         La pastèque est un bloc apparaissant naturellement dans les biomes jungle servant à obtenir des tranches de pastèque.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sugar-cane.png" alt="Canne à sucre" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sugar-cane.png" alt="Canne à sucre" class="block-img"> <!-- Image -->
                                     Canne à sucre
                                     <span class="tooltiptext">
                                         La canne à sucre est un bloc qui pousse toujours près de l'eau.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_hay-bale.png" alt="Botte de paille" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_hay-bale.png" alt="Botte de paille" class="block-img"> <!-- Image -->
                                     Botte de paille
                                     <span class="tooltiptext">
                                         Une botte de paille  est un bloc utilisé pour la décoration et le stockage du blé, qui sert aussi à soigner et à faire grandir les chevaux, à nourrir les lamas et à réduire les dégâts de chute
@@ -329,106 +334,106 @@
                         </div>
                     </td>
                 </tr>
-                <tr class="naturel">
-                    <th>Minerais</th> <!--Liste de blocs de minerais-->
+                <tr class="naturel"> <!-- Ligne minerais -->
+                    <th>Minerais</th> <!-- Titre -->
                     <td>
-                        <div class="contenu">  
-                            <ul>
+                        <div class="contenu">  <!-- Conteneur -->
+                            <ul> <!-- Liste minerais -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_diamond-ore.png" alt="Minerai de Diamant" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_diamond-ore.png" alt="Minerai de Diamant" class="block-img"> <!-- Image -->
                                     Minerai de Diamant
                                     <span class="tooltiptext">
                                        Le minerai de diamant est un minerai rare à partir duquel on obtient le diamant
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_iron-ore.png" alt="Minerai de Fer" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_iron-ore.png" alt="Minerai de Fer" class="block-img"> <!-- Image -->
                                     Minerai de Fer
                                     <span class="tooltiptext">
                                         Le minerai de fer est un minerai à partir duquel on obtient du fer brut qui peut être fondu en lingot de fer.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_coal-ore.png" alt="Minerai de charbon" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_coal-ore.png" alt="Minerai de charbon" class="block-img"> <!-- Image -->
                                     Minerai de Charbon
                                     <span class="tooltiptext">
                                         Le minerai de charbon  est le minerai le plus commun dans Minecraft.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_gold-ore.png" alt="Minerai d'or" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_gold-ore.png" alt="Minerai d'or" class="block-img"> <!-- Image -->
                                     Minerai d'or
                                     <span class="tooltiptext">
                                         Le minerai d'or  est un minerai rare à partir duquel on obtient de l'or brut qui peut être fondu en lingot d'or.
                                     </span>
-                                <tr>
-                    <th colspan="2"><button onclick="masquer('.utilitaire')">Utilitaire</button></th> <!--Liste de blocs utilitaires-->
-                     <tr class="utilitaire">
-                    <th>Interactif</th> <!--Liste de blocs de blocs Interactif-->
+                                <tr> <!-- Bouton utilitaire -->
+                    <th colspan="2"><button onclick="masquer('.utilitaire')">Utilitaire</button></th> <!-- Bouton masque catégorie utilitaire -->
+                     <tr class="utilitaire"> <!-- Ligne utilitaire - interactif -->
+                    <th>Interactif</th> <!-- Titre -->
                     <td>
-                        <div class="contenu">  
-                            <ul>
+                        <div class="contenu">  <!-- Conteneur -->
+                            <ul> <!-- Liste interactif -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_brewing-stand.png" alt="Alambic" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_brewing-stand.png" alt="Alambic" class="block-img"> <!-- Image -->
                                     Alambic
                                     <span class="tooltiptext">
                                         L'alambic est un bloc utilisé pour fabriquer des potions, des potions jetables et des potions persistantes.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_anvil.png" alt="Enclume" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_anvil.png" alt="Enclume" class="block-img"> <!-- Image -->
                                     Enclume
                                     <span class="tooltiptext">
                                         Les enclumes sont des blocs qui servent à réparer et renommer des objets sans leur faire perdre leurs éventuels enchantements.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_furnace.png" alt="Fourneau" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_furnace.png" alt="Fourneau" class="block-img"> <!-- Image -->
                                     Fourneau
                                     <span class="tooltiptext">
                                         Un fourneau  est un bloc utilisé pour faire cuire des blocs et des objets et les convertir en d'autres éléments.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_enchanting-table.png" alt="Table d'enchantement" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_enchanting-table.png" alt="Table d'enchantement" class="block-img"> <!-- Image -->
                                     Table d'enchantement
                                     <span class="tooltiptext">
                                         La table d'enchantement est un bloc qui permet de réaliser des enchantements en trois étapes, avec des effets basés sur les sorts choisis mais aussi un élément aléatoire.
                                     </span>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_chest.png" alt="Coffre" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_chest.png" alt="Coffre" class="block-img"> <!-- Image -->
                                     Coffre
                                     <span class="tooltiptext">
-                                       Les coffres  sont des blocs capables de stocker les objets.
+                                        Les coffres  sont des blocs capables de stocker les objets.
                                     </span>
                                 </li>
-                                 <tr class="utilitaire">
-                    <th>Utilisable</th> <!--Liste de blocs de blocs Interactif-->
+                            <tr class="utilitaire"> <!-- Ligne utilitaire - utilisable -->
+                    <th>Utilisable</th> <!-- Titre -->
                     <td>
-                        <div class="contenu">  
-                            <ul>
+                        <div class="contenu">  <!-- Conteneur -->
+                            <ul> <!-- Liste utilisable -->
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_ladder.png" alt="Échelle" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_ladder.png" alt="Échelle" class="block-img"> <!-- Image -->
                                     Échelle
                                     <span class="tooltiptext">
                                         L'échelle est une façade de blocs en bois, utilisée pour grimper le long des murs. 
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_nether-portal.png" alt="Portail du Nether" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_nether-portal.png" alt="Portail du Nether" class="block-img"> <!-- Image -->
                                     Portail du Nether
                                     <span class="tooltiptext">
                                         Le bloc de portail du Nether est la partie translucide du portail du Nether qui téléporte le joueur vers et en dehors du Nether.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_tnt.png" alt="TNT" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_tnt.png" alt="TNT" class="block-img"> <!-- Image -->
                                     TNT
                                     <span class="tooltiptext">
                                         Le TNT (Trinitrotoluène) est un bloc qui peut être utilisé par le joueur pour déclencher une explosion contrôlée.
                                     </span>
                                 </li>
                                 <li class="tooltip">
-                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sponge.png" alt="Éponge" class="block-img">
+                                    <img src="../IMAGE/Textures/Naturel/BlockSprite_sponge.png" alt="Éponge" class="block-img"> <!-- Image -->
                                     Éponge
                                     <span class="tooltiptext">
                                         L'éponge  est un bloc qui absorbe l'eau autour de lui, devenant alors une éponge mouillée .
@@ -447,19 +452,30 @@
                 </tr>
                 
             </tbody>
-        </table>
-    </main>
-    <footer>
-        <p>
-            Site web inspiré de : 
-            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a>
+        </table> <!-- Fin tableau -->
+        <p class="source">
+            Source des informations : <a href="https://fr.minecraft.wiki" target="_blank">Minecraft Wiki</a> (consulté le 05/11/2025)
         </p>
-        <div id="stats">
-            <p>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</p>
-            <p>👀 Nombre de visites : <span id="visitCount">0</span></p>
-            <p>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></p>
-        </div>
-    </footer>
-</body>
-</html>
+    </main> <!-- Fin main -->
 
+    <!-- FOOTER -->
+    <footer> <!-- Pied de page -->
+        <p> <!-- Texte du footer -->
+            Site web inspiré de : 
+            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a> <!-- Lien vers la source d'inspiration -->
+        </p>
+
+        <!-- STATISTIQUES D’UTILISATION -->
+        <div id="stats"> <!-- Boîte des compteurs (temps, visites, clics) -->
+            <ol id="stats-list"> <!-- Liste ordonnée (affichée sans numéros via CSS) -->
+                <li>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</li> <!-- Compteur temps -->
+                <li>👀 Nombre de visites : <span id="visitCount">0</span></li> <!-- Compteur visites -->
+                <li>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></li> <!-- Compteur clics -->
+            </ol>
+        </div> <!-- Fin stats -->
+    </footer> <!-- Fin footer -->
+
+    <a href="#" id="top-page"><img src="../IMAGE/arrow_upward_24dp_5D9E47_FILL0_wght400_GRAD0_opsz24.png" alt="Fleche vers le haut" class="arrow-up"></a> <!-- Bouton ancre haut -->
+
+</body>
+</html> <!-- Fin document -->

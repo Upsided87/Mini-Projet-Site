@@ -1,89 +1,91 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../CSS/mobs-style.css">
-    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" />
-    <script src="../JAVASCRIPT/main.js" defer></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-    <title>Mobs Minecraft</title>
+<!DOCTYPE html> <!-- Type document -->
+<html lang="fr"> <!-- Langue -->
+<head> <!-- Head -->
+    <meta charset="utf-8"> <!-- Encodage -->
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Responsive meta -->
+    <link rel="stylesheet" href="../CSS/mobs-style.css"> <!-- CSS mobs -->
+    <link rel="icon" type="image/x-icon" href="../IMAGE/Minecraft_Wiki_2023.png" /> <!-- Favicon -->
+    <script src="../JAVASCRIPT/main.js" defer></script> <!-- Script principal -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script> <!-- Librairie model-viewer -->
+    <title>Mobs Minecraft</title> <!-- Titre onglet -->
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <a href="index.html">
-                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki">
+<body> <!-- Corps -->
+
+    <!-- HEADER -->
+    <header class="header"> <!-- Entête -->
+        <nav class="navbar"> <!-- Navbar -->
+            <div class="navbar-left"> <!-- Conteneur gauche -->
+                <a href="index.html"> <!-- Lien accueil -->
+                    <img class="nav-logo" src="../IMAGE/Minecraft_Wiki_2023.png" alt="Logo Minecraft Wiki"> <!-- Logo -->
                 </a>
-                <ul class="nav-links">
+                <ul class="nav-links"> <!-- Liens nav -->
                     <li class="nav-item">
-                        <a href="blocs.html">Blocs</a>  
+                        <a href="blocs.html">Blocs</a> <!-- Lien blocs -->
                     </li>
                     <li class="nav-item">
-                        <a href="mobs.html">Mobs</a>
+                        <a href="mobs.html">Mobs</a> <!-- Lien mobs -->
                     </li>
                 </ul>
             </div>
-        </nav>  
-        <div class="navbar-mid">
-            <h1>Minecraft Wiki</h1>
-            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p>
+        </nav>
+        <div class="navbar-mid"> <!-- Zone titre -->
+            <h1>Minecraft Wiki</h1> <!-- Titre -->
+            <p>Bienvenue sur notre mini-site dédié à Minecraft !</p> <!-- Sous-titre -->
         </div>
-        <div class="navbar-right"></div>
+        <div class="navbar-right"></div> <!-- Zone droite -->
     </header>
-    
-    <main class="grid-container">
+
+    <main class="grid-container"> <!-- Grille présentant les mobs -->
         <!-- Creeper -->
-        <div class="card hostile">
-            <model-viewer 
-                src="../IMAGE/3D/minecraft_-_creeper.glb"
-                data-son="../IMAGE/Sons/Creeper Minecraft Sound Effect.mp3"
+        <div class="card hostile"> <!-- Carte creeper -->
+            <model-viewer
+                src="../IMAGE/3D/minecraft_-_creeper.glb" 
+                data-son="../IMAGE/Sons/Creeper Minecraft Sound Effect.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Hostile</li>
-                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
-                    <li><strong>Comportement :</strong> Approche silencieusement le joueur et explose à proximité.</li>
+            <div class="description"> <!-- Description creeper -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Hostile</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Approche silencieusement le joueur et explose à proximité.</li> <!-- Comportement -->
                 </ul>
             </div>
         </div>
 
         <!-- Zombie -->
-        <div class="card hostile">
+        <div class="card hostile"> <!-- Carte zombie -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_zombie.glb"
-                data-son="../IMAGE/Sons/Minecraft Zombie Sound Effect.mp3"
+                src="../IMAGE/3D/minecraft_-_zombie.glb" 
+                data-son="../IMAGE/Sons/Minecraft Zombie Sound Effect.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Hostile</li>
-                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
-                    <li><strong>Comportement :</strong> Attaque le joueur et les villageois la nuit ou dans l’ombre.</li>
-                    <li><strong>Butin :</strong> Chair putréfiée, parfois équipement en fer.</li>
-                    <li><strong>Variante :</strong> Zombie villageois, noyé (dans l’eau).</li>
+            <div class="description"> <!-- Description zombie -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Hostile</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Attaque le joueur et les villageois la nuit ou dans l’ombre.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Chair putréfiée, parfois équipement en fer.</li> <!-- Butin -->
+                    <li><strong>Variante :</strong> Zombie villageois, noyé (dans l’eau).</li> <!-- Variantes -->
                 </ul>
             </div>
         </div>
 
         <!-- Squelette -->
-        <div class="card hostile">
+        <div class="card hostile"> <!-- Carte squelette -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_skeleton.glb"
+                src="../IMAGE/3D/minecraft_-_skeleton.glb" 
                 data-son="../IMAGE/Sons/Minecraft skeleton (sound effect).mp3"
                 camera-controls
                 disable-pan
@@ -91,153 +93,160 @@
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Hostile</li>
-                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
-                    <li><strong>Comportement :</strong> Tire à l’arc sur le joueur à distance.</li>
-                    <li><strong>Butin :</strong> Os, flèches, parfois arc.</li>
-                    <li><strong>Variante :</strong> Wither squelette (Nether).</li>
+            <div class="description"> <!-- Description squelette -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Hostile</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Tire à l’arc sur le joueur à distance.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Os, flèches, parfois arc.</li> <!-- Butin -->
+                    <li><strong>Variante :</strong> Wither squelette (Nether).</li> <!-- Variante -->
                 </ul>
             </div>
         </div>
 
         <!-- Loup -->
-        <div class="card neutre">
+        <div class="card neutre"> <!-- Carte loup -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_wolf.glb"
-                data-son="../IMAGE/Sons/Minecraft Wolf Sound Effects.mp3"
+                src="../IMAGE/3D/minecraft_-_wolf.glb" 
+                data-son="../IMAGE/Sons/Minecraft Wolf Sound Effects.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Neutre</li>
-                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li>
-                    <li><strong>Comportement :</strong> Attaque si frappé. Peut être apprivoisé avec des os.</li>
-                    <li><strong>Utilité :</strong> Défend son maître contre les mobs hostiles.</li>
-                    <li><strong>Biome :</strong> Forêt, taïga.</li>
+            <div class="description"> <!-- Description loup -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Neutre</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Attaque si frappé. Peut être apprivoisé avec des os.</li> <!-- Comportement -->
+                    <li><strong>Utilité :</strong> Défend son maître contre les mobs hostiles.</li> <!-- Utilité -->
+                    <li><strong>Biome :</strong> Forêt, taïga.</li> <!-- Biome -->
                 </ul>
             </div>
         </div>
 
         <!-- Villageois -->
-        <div class="card neutre">
+        <div class="card neutre"> <!-- Carte villageois -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_villager.glb"
+                src="../IMAGE/3D/minecraft_-_villager.glb" 
                 camera-controls
-                data-son="../IMAGE/Sons/Minecraft Villager Sound Effect.mp3"
+                data-son="../IMAGE/Sons/Minecraft Villager Sound Effect.mp3" 
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
                 orientation="180deg 180deg 0deg"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Neutre</li>
-                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li>
-                    <li><strong>Comportement :</strong> Fuit les monstres et échange avec le joueur.</li>
-                    <li><strong>Butin :</strong> Aucun (inutile de le tuer...)</li>
-                    <li><strong>Particularité :</strong> Possède différents métiers selon le poste de travail.</li>
-                    <li><strong>Utilité :</strong> Permet d’obtenir des objets rares via le troc.</li>
+            <div class="description"> <!-- Description villageois -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Neutre</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 20 (10 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Fuit les monstres et échange avec le joueur.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Aucun (inutile de le tuer...)</li> <!-- Butin -->
+                    <li><strong>Particularité :</strong> Possède différents métiers selon le poste de travail.</li> <!-- Particularité -->
+                    <li><strong>Utilité :</strong> Permet d’obtenir des objets rares via le troc.</li> <!-- Utilité -->
                 </ul>
             </div>
         </div>
 
         <!-- Vache -->
-        <div class="card passif">
+        <div class="card passif"> <!-- Carte vache -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_cow.glb"
-                data-son="../IMAGE/Sons/Cow Sounds Effects.mp3"
+                src="../IMAGE/3D/minecraft_-_cow.glb" 
+                data-son="../IMAGE/Sons/Cow Sounds Effects.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Passif</li>
-                    <li><strong>Points de vie :</strong> 10 (5 cœurs)</li>
-                    <li><strong>Comportement :</strong> Ne fuit pas, peut être reproduite avec du blé.</li>
-                    <li><strong>Butin :</strong> Cuir, viande crue (ou cuite si tuée par le feu).</li>
-                    <li><strong>Utilité :</strong> Source principale de nourriture et de cuir.</li>
+            <div class="description"> <!-- Description vache -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Passif</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 10 (5 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Ne fuit pas, peut être reproduite avec du blé.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Cuir, viande crue (ou cuite si tuée par le feu).</li> <!-- Butin -->
+                    <li><strong>Utilité :</strong> Source principale de nourriture et de cuir.</li> <!-- Utilité -->
                 </ul>
             </div>
         </div>
 
         <!-- Poule -->
-        <div class="card passif">
+        <div class="card passif"> <!-- Carte poule -->
             <model-viewer 
                 src="../IMAGE/3D/minecraft_-_chicken.glb"
-                data-son="../IMAGE/Sons/All Chicken Sounds.mp3"
+                data-son="../IMAGE/Sons/All Chicken Sounds.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Passif</li>
-                    <li><strong>Points de vie :</strong> 4 (2 cœurs)</li>
-                    <li><strong>Comportement :</strong> Se déplace lentement et pond des œufs.</li>
-                    <li><strong>Butin :</strong> Plumes, viande de poulet.</li>
-                    <li><strong>Utilité :</strong> Source d’œufs et de nourriture.</li>
+            <div class="description"> <!-- Description poule -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Passif</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 4 (2 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Se déplace lentement et pond des œufs.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Plumes, viande de poulet.</li> <!-- Butin -->
+                    <li><strong>Utilité :</strong> Source d’œufs et de nourriture.</li> <!-- Utilité -->
                 </ul>
             </div>
         </div>
 
         <!-- Mouton -->
-        <div class="card passif">
+        <div class="card passif"> <!-- Carte mouton -->
             <model-viewer 
-                src="../IMAGE/3D/minecraft_-_sheep.glb"
-                data-son="../IMAGE/Sons/Minecraft sheep sound effect.mp3"
+                src="../IMAGE/3D/minecraft_-_sheep.glb" 
+                data-son="../IMAGE/Sons/Minecraft sheep sound effect.mp3" 
                 camera-controls
                 disable-pan
                 disable-zoom
                 disable-tap
                 autoplay
                 interaction-prompt="none"
-                style="width: 200px; height: 400px;">
+                style="width: 200px; height: 400px;"> <!-- Taille viewer -->
             </model-viewer>
-            <div class="description">
-                <ul>
-                    <li><strong>Type :</strong> Passif</li>
-                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li>
-                    <li><strong>Comportement :</strong> Se promène et mange l’herbe.</li>
-                    <li><strong>Butin :</strong> Laine, viande de mouton.</li>
-                    <li><strong>Utilité :</strong> Fournit de la laine pour les lits.</li>
+            <div class="description"> <!-- Description mouton -->
+                <ul> <!-- Liste attributs -->
+                    <li><strong>Type :</strong> Passif</li> <!-- Type -->
+                    <li><strong>Points de vie :</strong> 8 (4 cœurs)</li> <!-- PV -->
+                    <li><strong>Comportement :</strong> Se promène et mange l’herbe.</li> <!-- Comportement -->
+                    <li><strong>Butin :</strong> Laine, viande de mouton.</li> <!-- Butin -->
+                    <li><strong>Utilité :</strong> Fournit de la laine pour les lits.</li> <!-- Utilité -->
                 </ul>
             </div>
         </div>
-    </main>
+    </main> <!-- Fin main -->
 
-    <footer>
-        <p>
+    <!-- FOOTER -->
+    <footer> <!-- Pied de page -->
+        <p> <!-- Texte du footer -->
             Site web inspiré de : 
-            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a>
+            <a href="https://fr.minecraft.wiki" class="text-footer"> https://fr.minecraft.wiki</a> <!-- Lien vers la source d'inspiration -->
         </p>
-        <div id="stats">
-            <p>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</p>
-            <p>👀 Nombre de visites : <span id="visitCount">0</span></p>
-            <p>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></p>
-        </div>
-    </footer>
+
+        <!-- STATISTIQUES D’UTILISATION -->
+        <div id="stats"> <!-- Boîte des compteurs (temps, visites, clics) -->
+            <ol id="stats-list"> <!-- Liste ordonnée (affichée sans numéros via CSS) -->
+                <li>⏱ Temps passé sur la page : <span id="timeSpent">0</span> secondes</li> <!-- Compteur temps -->
+                <li>👀 Nombre de visites : <span id="visitCount">0</span></li> <!-- Compteur visites -->
+                <li>🖱️ Nombre de clics sur ce site : <span id="click-count">0</span></li> <!-- Compteur clics -->
+            </ol>
+        </div> <!-- Fin stats -->
+    </footer> <!-- Fin footer -->
     
+    <a href="#" id="top-page"><img src="../IMAGE/arrow_upward_24dp_5D9E47_FILL0_wght400_GRAD0_opsz24.png" alt="Fleche vers le haut" class="arrow-up"></a> <!-- Bouton ancre haut -->
+
 </body>
-</html>
+</html> <!-- Fin document -->
